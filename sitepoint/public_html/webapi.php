@@ -269,7 +269,9 @@
 		  if(isset($_GET['kodikos']))
 			  {
 				$kodikos = $_GET['kodikos'];
-				$query = "SELECT DISTINCT eidos_ripou FROM (SELECT kodikos,eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily WHERE kodikos = '".$kodikos."' GROUP BY eidos_ripou) as a WHERE a.max_imerominia >='".$fromdate."' AND a.max_imerominia <='".$todate."' AND a.min_imerominia >='".$fromdate."' AND a.min_imerominia <='".$todate."'";
+				$query = "SELECT DISTINCT eidos_ripou FROM (SELECT kodikos,eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily WHERE kodikos = '".$kodikos."' GROUP BY eidos_ripou) as a WHERE max_imerominia >='".$todate."'  AND min_imerominia <='".$fromdate."'";
+
+        // $query = "SELECT DISTINCT eidos_ripou,kodikos, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily WHERE kodikos = '".$kodikos."' AND max_imerominia >='".$fromdate."' AND max_imerominia <='".$todate."' AND min_imerominia >='".$fromdate."' AND min_imerominia <='".$todate."'";
 				$result = mysqli_query($GLOBALS["___mysqli_ston"], $query);
 				if (!$result) 
 				{
@@ -278,7 +280,7 @@
 			  }
 			  else
 			  {
-				$query = "SELECT DISTINCT eidos_ripou FROM (SELECT eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily GROUP BY eidos_ripou) as a WHERE a.max_imerominia >='".$fromdate."' AND a.max_imerominia <='".$todate."' AND a.min_imerominia >='".$fromdate."' AND a.min_imerominia <='".$todate."'";
+				$query = "SELECT DISTINCT eidos_ripou FROM (SELECT eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily GROUP BY eidos_ripou) as a WHERE max_imerominia >='".$todate."'  AND min_imerominia <='".$fromdate."'";
 				$result = mysqli_query($GLOBALS["___mysqli_ston"], $query);
 				if (!$result) 
 				{
@@ -286,6 +288,31 @@
 				}
 			  }
 		  }
+      else{
+            $fromdate = '2010-01-01';
+            $todate = '2015-12-12';
+            if(isset($_GET['kodikos']))
+              {
+              $kodikos = $_GET['kodikos'];
+              $query = "SELECT DISTINCT eidos_ripou FROM (SELECT kodikos,eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily WHERE kodikos = '".$kodikos."' GROUP BY eidos_ripou) as a WHERE max_imerominia >='".$todate."' AND min_imerominia <='".$fromdate."'";
+
+              // $query = "SELECT DISTINCT eidos_ripou,kodikos, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily WHERE kodikos = '".$kodikos."' AND max_imerominia >='".$fromdate."' AND max_imerominia <='".$todate."' AND min_imerominia >='".$fromdate."' AND min_imerominia <='".$todate."'";
+              $result = mysqli_query($GLOBALS["___mysqli_ston"], $query);
+              if (!$result) 
+              {
+                die('Invalid query: ' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));
+              }
+              }
+              else
+              {
+              $query = "SELECT DISTINCT eidos_ripou FROM (SELECT eidos_ripou, min(imerominia) as min_imerominia, max(imerominia) as max_imerominia FROM daily GROUP BY eidos_ripou) as a WHERE max_imerominia >='".$todate."'  AND min_imerominia <='".$fromdate."'";
+              $result = mysqli_query($GLOBALS["___mysqli_ston"], $query);
+              if (!$result) 
+              {
+                die('Invalid query: ' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));
+              }
+            }
+      }
 	 
 	
       
