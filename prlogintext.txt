@@ -1,0 +1,7 @@
+<h4 class="login">Είσοδος Προγραμματιστή</h4>
+<form class="prloginform" id="prloginform">
+<input type="text" name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Password">
+</form>
+<input  class="prbutton" id="loginbutton" type="submit" name="submit" value="Είσοδος" onclick="proglogin()">
+<input  class="prbutton" id="signupbutton" type="submit" name="submit" value="Φόρμα Εγγραφής" onclick="signup()">

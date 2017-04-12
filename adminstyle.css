@@ -1,0 +1,249 @@
+body { /*programmer*/
+  /*background: #cdf3c4; */
+  background-image: url(Photos/bg.jpg);
+  background-size:cover;
+  font-family: 'Open Sans', sans-serif;
+  color:#000;
+  line-height: 40px;
+  margin-top:-60px;
+  margin-bottom:500px;
+}
+
+#adminlogout { /*programmer logout button*/
+	background-color: rgba(0,0,0,0.30); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: large;
+	font-style: italic;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border-radius: 50%;
+}
+#adminlogout:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color:#f94e66;
+	text-shadow:0px 0px 6px #8C6D72;
+}
+
+#erasebt { /*diagrafi ston pinaka */
+    overflow: hidden; 
+    height: auto !important; 
+    height: 15px;
+    margin: 4px;
+    padding: 5px 3px 5px 5px;
+    background: #B70002;
+    color: white;
+    cursor: default;    
+    font-size: 11px;
+	border:1;
+    border-radius: 4px;
+    font-weight: bold;
+	text-align: centre; 
+}
+
+a{ /*diagrafh ston pinaka*/
+	color:white;
+}
+
+.login
+{
+    
+    text-align: center;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+    /*overflow: visible;*/
+    /*width:  300%;*/
+    
+}
+
+
+h2
+{
+  text-align: start;    
+  text-decoration: underline overline;
+  font-style:italic;
+  font-weight: 600;
+}
+/*pinakes*/
+th { 
+  font-style: italic;
+  background-color: rgba(0,0,0,0.30);
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+td {
+  font-weight: 300;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+  text-align: center; 
+}
+/*pinakes telos*/
+
+.inputs {
+  display:block;
+  width:260px;
+  padding:10px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border:0;
+}
+
+#lista {
+  width: 4%;
+  position: relative;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 28px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  border: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+#lista:focus {
+	z-index: 3;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+#lista > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+
+#whom {
+	font-style:italic;
+	font-weight: 500;
+}
+
+#person {
+	font-style: italic;
+	font-weight: 600;
+	text-decoration: underline;
+	color: #312B2B;
+}
+
+
+
+#wallpaper
+{
+  width: 100%;
+  height: 300px;
+}
+#maintable
+{
+    overflow: hidden;
+    float: left;
+}
+#loginswrapper
+{
+    overflow: hidden;
+    float: right;
+    border: 1px solid #000;
+}
+#mainpage
+{
+    overflow: hidden;
+    display: none;
+}
+#map
+{
+    float: left;
+}
+#admindiv
+{
+    /*float:right;*/
+    /*border-right: 1px solid gray;*/
+    width: 30%;
+}
+
+
+#stationslist
+{
+    display:block;
+    
+}
+
+.stationbutton
+{
+    /*margin-left: 20cm;*/
+    background-color: #8a8585; 
+    border: none;
+    color: #a00c0c;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#astationbutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color:#f94e66;
+	text-shadow:0px 0px 6px #8C6D72;
+}
+
+#upload {
+	cursor: pointer;
+
+}
+
+#submitcsv {
+	cursor: pointer;
+}
+#submitcsv:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	color:#f94e66;
+	text-shadow:0px 0px 6px #8C6D72;
+}
+#adminwrapper
+{
+    display: inline;
+}
+#loginswrapper
+{
+    display:  inline;
+}
+#stationlistborder
+{
+    width: 30%;
+    border-top: 1px solid gray;
+}
+#mapborder
+{
+    width: 30%;
+    border-top: 1px solid gray;
+}
+#csvuploadborder
+{
+    border-top: 1px solid gray;
+    width: 35%;
+}
+
+#uploadcsvdiv
+{
+    
+    display: block;
+}
