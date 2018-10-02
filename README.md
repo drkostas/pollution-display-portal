@@ -1,5 +1,8 @@
-# pollution-display-portal
-This is the first website I created for a University Project.
-I offers a webapi for uploading pollution records in a website. 
-It displays the records in a heatmap.
-As an administrator you are able to view statistics about the usage of the api.
+# Pollution Display Portal
+
+_**Demo:**_ http://pollution-portal.ga
+
+My first website.
+- Offers a webapi for uploading csv pollution records. 
+- Pollution Display on a Heatmap.
+- Administrator access for viewing per api-key statistics.
